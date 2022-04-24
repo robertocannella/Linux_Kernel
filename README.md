@@ -21,12 +21,36 @@ cd Linux_Driver_Tutorial
 
 #
 # Create Repository
+# Follow prompts
 #
+
+gh repo create 
+
 
 git init -b main
 git add . && git commit -m "initial commit"
 
+
+
 #
-# Follow promts
+# create c file, Makefile and run make
+# 
+
 #
-gh repo create 
+# Initialize module:
+#
+ 
+sudo insmod mymodule.ko
+
+#
+# Commands to see running modules
+#
+
+lsmod | grep mymodule
+dmesg | tail
+
+#
+# Remove module
+#
+
+sudo rmmod mymodule
